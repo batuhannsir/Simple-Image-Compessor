@@ -40,7 +40,20 @@ while True:
                 break
         except Exception as e:
             print('Please enter your choise!')
-
+while True:
+    print(f'1 to JPG')
+    print(f'2 to PNG')
+    print(f'3 to GIF')
+    print(f'4 to WEBP')
+    formatChoise = input("Enter format number: ")
+    if formatChoise != "":
+        formats = ["","JPG","PNG","GIF","WEBP"]
+        try:
+            if int(formatChoise) > 0 and int(formatChoise) <=4:
+                formatChoise = formats[int(formatChoise)]
+                break
+        except Exception as e:
+            print('Please enter your choise!')
 files = os.listdir(dir)
 totalBefore = 0
 totalAfter = 0
@@ -52,7 +65,7 @@ for file in files:
     if fileExtension in forbiddenExtentions:
         beforeSize = os.path.getsize(dir+"/"+file)
         image = Image.open(dir+"/"+file)
-        image.save(target_dir+"/"+file, "WEBP", optimize=optimizeStatus,quality=qualityVal)
+        image.save(target_dir+"/"+file, formatChoise, optimize=optimizeStatus,quality=qualityVal)
         afterSize = os.path.getsize(target_dir+"/"+file)
         totalFile += 1
         totalBefore += beforeSize
