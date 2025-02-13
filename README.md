@@ -9,10 +9,15 @@ pip3 install -r requirements.txt
 
 ## Usage
 
+### Run via terminal
+
 Copy the image.py file to the folder containing the images you want to compress, then run the following code via terminal
 ```bash
 python3 image.py
 ```
+
+### Run via exe
+Coming Soon
 
 ## Description
 
