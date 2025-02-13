@@ -22,4 +22,3 @@ This piece of code compresses the images in the folder it is in, adhering to the
 Supported Extentions
 [".jpg",".jpeg",".png",".gif",".bmp",".ico",".webp"]
 ```
-## License
