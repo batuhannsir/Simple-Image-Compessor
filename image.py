@@ -47,7 +47,7 @@ while True:
     print(f'4 to WEBP')
     formatChoise = input("Enter format number: ")
     if formatChoise != "":
-        formats = ["","JPG","PNG","GIF","WEBP"]
+        formats = ["","JPEG","PNG","GIF","WEBP"]
         try:
             if int(formatChoise) > 0 and int(formatChoise) <=4:
                 formatChoise = formats[int(formatChoise)]
